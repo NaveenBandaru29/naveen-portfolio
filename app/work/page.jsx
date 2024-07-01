@@ -36,7 +36,7 @@ const projects = [
     num: "02",
     category: "Frontend Project",
     title: "Portfolio Wesite",
-    desc: "Explore my portfolio website to see my work in frontend and backend development, showcasing my projects, skills, and accomplishments in software development..",
+    desc: "Explore my portfolio website to see my work in frontend and backend development, showcasing my projects, skills, and accomplishments in software development.",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
     image: "/assets/work/thumb-3.png",
     live: "/",
