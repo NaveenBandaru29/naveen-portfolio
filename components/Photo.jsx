@@ -26,7 +26,7 @@ const Photo = () => {
           <Image
             src="/assets/photo.png"
             priority
-            quality={95}
+            sizes="(max-width: 768px) 240px, (max-width: 1200px) 280px, 420px"
             alt="Naveen Bandaru"
             fill
             className="rounded-full object-cover shadow-2xl"
