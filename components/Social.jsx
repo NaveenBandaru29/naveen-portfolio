@@ -1,23 +1,50 @@
-import Link from "next/link"
-import {FaGithub, FaLinkedinIn,} from "react-icons/fa" 
+import Link from "next/link";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const socials = [
-    {icon: <FaGithub />, path: "https://github.com/NaveenBandaru29"},
-    {icon: <FaLinkedinIn />, path: "https://linkedin.com/in/naveen-bandaru-881177239"},
-    
-]
+  {
+    name: "GitHub",
+    icon: <FaGithub />,
+    path: "https://github.com/NaveenBandaru29",
+  },
+  {
+    name: "LinkedIn",
+    icon: <FaLinkedinIn />,
+    path: "https://linkedin.com/in/naveen-bandaru-881177239",
+  },
+];
 
-const Social = ({containerStyles, iconStyles}) => {
+const Social = ({ containerStyles, iconStyles }) => {
   return (
     <div className={containerStyles}>
-        
+      <TooltipProvider delayDuration={100}>
         {socials.map((social, index) => (
-            <Link href={social.path} key={index} className={iconStyles} target="_blank">
+          <Tooltip key={index}>
+            <TooltipTrigger asChild>
+              <Link
+                href={social.path}
+                className={iconStyles}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.name}
+              >
                 {social.icon}
-            </Link>
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent className="bg-[#27272c] border border-white/10 text-white font-mono text-xs">
+              <p>{social.name}</p>
+            </TooltipContent>
+          </Tooltip>
         ))}
+      </TooltipProvider>
     </div>
-  )
-}
+  );
+};
 
-export default Social
+export default Social;

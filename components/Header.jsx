@@ -2,29 +2,37 @@ import Link from 'next/link';
 import Navbar from './Navbar';
 import { Button } from './ui/button';
 import MobileNav from './MobileNav';
+import { Send } from 'lucide-react';
+
 const Header = () => {
   return (
-    <header className="py-6 xl:py-8 text-white">
-        <div className="container mx-auto flex justify-between items-center">
-            {/* Logo */}
-            <Link href='/'>
-            <h1 className='text-3xl font-semibold'>
-                Naveen<span className='text-accent'>.</span>
-            </h1>
-            </Link>
-            <div className="hidden lg:flex items-center gap-8">
-                <Navbar />
-                <Link href="/contact">
-                    <Button>Hire Me</Button>
-                </Link>
-            </div>
-            <div className="lg:hidden">
-                <MobileNav />
-            </div>
-        </div>
-        
-    </header>
-  )
-}
+    <header className="sticky top-0 z-50 bg-[#1c1c22]/85 backdrop-blur-md border-b border-white/5 py-4 xl:py-5 transition-all duration-300">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* Logo */}
+        <Link href="/" className="group flex items-center gap-1">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-white group-hover:text-white/90 transition-colors font-mono">
+            Naveen<span className="text-accent group-hover:animate-pulse">.</span>
+          </h1>
+        </Link>
 
-export default Header
+        {/* Desktop Nav & CTA */}
+        <div className="hidden lg:flex items-center gap-6">
+          <Navbar />
+          <Link href="/contact">
+            <Button className="bg-accent hover:bg-accent-hover text-primary font-mono text-xs uppercase font-bold tracking-wider px-5 py-2.5 rounded-full shadow-lg shadow-accent/15 flex items-center gap-2 transition-all duration-300">
+              <span>Hire Me</span>
+              <Send size={13} />
+            </Button>
+          </Link>
+        </div>
+
+        {/* Mobile Nav */}
+        <div className="lg:hidden">
+          <MobileNav />
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
