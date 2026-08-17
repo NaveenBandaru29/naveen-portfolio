@@ -163,7 +163,7 @@ const Contact = () => {
                 <div>
                   <label className="text-white/70 text-xs font-mono block mb-1.5">Topic / Service of Interest</label>
                   <Select onValueChange={(val) => setFormData({ ...formData, service: val })}>
-                    <SelectTrigger className="w-full bg-[#1c1c22] border-white/10 text-white/80">
+                    <SelectTrigger className="w-full bg-[#1c1c22] border-white/10 text-white/80 cursor-pointer">
                       <SelectValue placeholder="Select an area of interest" />
                     </SelectTrigger>
                     <SelectContent className="bg-[#1c1c22] border-white/15 text-white">
@@ -196,7 +196,7 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full sm:w-auto bg-accent hover:bg-accent-hover text-primary font-mono text-xs uppercase font-bold tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-accent/15 transition-all duration-300"
+                    className="w-full sm:w-auto bg-accent hover:bg-accent-hover text-primary font-mono text-xs uppercase font-bold tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-accent/15 transition-all duration-300 cursor-pointer"
                   >
                     <span>Send Message</span>
                     <Send size={14} />
@@ -233,7 +233,7 @@ const Contact = () => {
                   {item.href ? (
                     <a
                       href={item.href}
-                      className="shrink-0 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-accent hover:text-primary border border-white/10 text-white/80 font-mono text-xs flex items-center gap-1.5 transition-all duration-300"
+                      className="shrink-0 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-accent hover:text-primary border border-white/10 text-white/80 font-mono text-xs flex items-center gap-1.5 transition-all duration-300 cursor-pointer"
                     >
                       <span>{item.actionText}</span>
                       <ArrowUpRight size={13} />

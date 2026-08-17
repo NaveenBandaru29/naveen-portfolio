@@ -35,7 +35,7 @@ const Navbar = () => {
           <Link
             href={link.path}
             key={link.path}
-            className={`relative flex items-center gap-2 px-4 py-2 rounded-full text-xs font-mono transition-all duration-300 ${isActive
+            className={`relative flex items-center gap-2 px-4 py-2 rounded-full text-xs font-mono transition-all duration-300 cursor-pointer ${isActive
               ? "text-accent font-semibold"
               : "text-white/70 hover:text-white hover:bg-white/5"
               }`}

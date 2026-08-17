@@ -352,7 +352,7 @@ const Work = () => {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`relative px-4 py-2 rounded-full text-xs font-mono transition-all duration-300 flex items-center gap-2 ${isActive
+                className={`relative px-4 py-2 rounded-full text-xs font-mono transition-all duration-300 flex items-center gap-2 cursor-pointer ${isActive
                   ? "bg-accent text-primary font-semibold shadow-lg shadow-accent/20"
                   : "bg-[#27272c] text-white/70 hover:text-white hover:bg-[#323238] border border-white/5"
                   }`}
@@ -482,7 +482,7 @@ const Work = () => {
                           <Link
                             href={project.live}
                             target="_blank"
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-primary font-medium text-xs hover:bg-accent-hover transition-colors shadow-sm"
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-primary font-medium text-xs hover:bg-accent-hover transition-colors shadow-sm cursor-pointer"
                           >
                             <span>Live Demo</span>
                             <ExternalLink size={13} />
@@ -494,7 +494,7 @@ const Work = () => {
                           <Link
                             href={project.github}
                             target="_blank"
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium text-xs transition-colors"
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium text-xs transition-colors cursor-pointer"
                           >
                             <FaGithub size={14} />
                             <span>Source Code</span>

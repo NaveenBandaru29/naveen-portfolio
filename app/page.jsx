@@ -59,7 +59,7 @@ const Home = () => {
 
             {/* Description */}
             <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-6 font-normal">
-              Full-Stack Developer specializing in building high-performance web and cross-platform mobile applications with <span className="text-white font-medium">React</span>, <span className="text-white font-medium">React Native</span>, <span className="text-white font-medium">Next.js</span>, and <span className="text-white font-medium">Go</span>. Focused on clean architecture, scalable data pipelines, and pixel-perfect design.
+              Frontend & Mobile Developer specializing in building high-performance web and cross-platform mobile applications with <span className="text-white font-medium">React</span>, <span className="text-white font-medium">React Native</span>, and <span className="text-white font-medium">Next.js</span>, with hands-on full-stack experience in <span className="text-white font-medium">Go</span> and <span className="text-white font-medium">PostgreSQL</span>. Focused on clean architecture, seamless API integration, and intuitive user experiences.
             </p>
 
             {/* Key Tech Badges */}
@@ -80,12 +80,12 @@ const Home = () => {
               <Link
                 href="/Naveen-Bandaru-Resume.pdf"
                 target="_blank"
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto cursor-pointer"
               >
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full sm:w-auto uppercase flex items-center justify-center gap-2 border-accent text-accent hover:bg-accent hover:text-primary font-mono text-xs tracking-wider transition-all duration-300 font-bold"
+                  className="w-full sm:w-auto uppercase flex items-center justify-center gap-2 border-accent text-accent hover:bg-accent hover:text-primary font-mono text-xs tracking-wider transition-all duration-300 font-bold cursor-pointer"
                 >
                   <span>Download Resume</span>
                   <FiDownload className="text-base" />
@@ -93,10 +93,10 @@ const Home = () => {
               </Link>
 
               {/* Explore Projects */}
-              <Link href="/work" className="w-full sm:w-auto">
+              <Link href="/work" className="w-full sm:w-auto cursor-pointer">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-[#27272c] hover:bg-[#323238] border border-white/10 text-white font-mono text-xs tracking-wider flex items-center justify-center gap-2 transition-all duration-300"
+                  className="w-full sm:w-auto bg-[#27272c] hover:bg-[#323238] border border-white/10 text-white font-mono text-xs tracking-wider flex items-center justify-center gap-2 transition-all duration-300 cursor-pointer"
                 >
                   <span>View Projects</span>
                   <BsArrowRight className="text-accent text-sm" />
@@ -107,7 +107,7 @@ const Home = () => {
               <div className="pt-2 sm:pt-0">
                 <Social
                   containerStyles="flex gap-3"
-                  iconStyles="w-10 h-10 border border-white/10 rounded-full flex justify-center items-center text-white/80 text-base bg-[#27272c] hover:border-accent hover:text-accent hover:bg-[#1c1c22] transition-all duration-300 shadow-sm"
+                  iconStyles="w-10 h-10 border border-white/10 rounded-full flex justify-center items-center text-white/80 text-base bg-[#27272c] hover:border-accent hover:text-accent hover:bg-[#1c1c22] transition-all duration-300 shadow-sm cursor-pointer"
                 />
               </div>
             </div>

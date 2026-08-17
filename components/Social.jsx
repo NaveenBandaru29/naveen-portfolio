@@ -29,7 +29,7 @@ const Social = ({ containerStyles, iconStyles }) => {
             <TooltipTrigger asChild>
               <Link
                 href={social.path}
-                className={iconStyles}
+                className={`${iconStyles} cursor-pointer`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.name}

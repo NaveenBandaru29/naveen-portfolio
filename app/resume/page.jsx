@@ -133,8 +133,8 @@ const skillsCategories = [
     skills: [
       { name: "Go (Golang)", icon: <SiGo className="text-[#00ADD8]" />, level: "Working Knowledge" },
       { name: "PostgreSQL", icon: <SiPostgresql className="text-[#4169E1]" />, level: "Working Knowledge" },
-      { name: "Python", icon: <SiPython className="text-[#3776AB]" />, level: "Working Knowledge" },
-      { name: "Django", icon: <SiDjango className="text-[#092E20]" />, level: "Working Knowledge" },
+      // { name: "Python", icon: <SiPython className="text-[#3776AB]" />, level: "Working Knowledge" },
+      // { name: "Django", icon: <SiDjango className="text-[#092E20]" />, level: "Working Knowledge" },
     ]
   },
   {
@@ -228,7 +228,7 @@ const Resume = () => {
           <TabsList className="grid grid-cols-2 lg:flex lg:flex-col w-full lg:w-[320px] xl:w-[360px] gap-2.5 sm:gap-3 bg-transparent p-0">
             <TabsTrigger
               value="experience"
-              className="flex items-center justify-between gap-2 sm:gap-3 px-3.5 sm:px-5 py-3 sm:py-3.5 rounded-xl bg-[#27272c] border border-white/5 data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:font-bold transition-all duration-300 group"
+              className="flex items-center justify-between gap-2 sm:gap-3 px-3.5 sm:px-5 py-3 sm:py-3.5 rounded-xl bg-[#27272c] border border-white/5 data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:font-bold transition-all duration-300 group cursor-pointer"
             >
               <div className="flex items-center gap-2 sm:gap-3 min-w-0">
                 <Briefcase size={16} className="group-data-[state=active]:text-primary text-accent transition-colors shrink-0" />
@@ -241,7 +241,7 @@ const Resume = () => {
 
             <TabsTrigger
               value="skills"
-              className="flex items-center justify-between gap-2 sm:gap-3 px-3.5 sm:px-5 py-3 sm:py-3.5 rounded-xl bg-[#27272c] border border-white/5 data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:font-bold transition-all duration-300 group"
+              className="flex items-center justify-between gap-2 sm:gap-3 px-3.5 sm:px-5 py-3 sm:py-3.5 rounded-xl bg-[#27272c] border border-white/5 data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:font-bold transition-all duration-300 group cursor-pointer"
             >
               <div className="flex items-center gap-2 sm:gap-3 min-w-0">
                 <Code2 size={16} className="group-data-[state=active]:text-primary text-accent transition-colors shrink-0" />
@@ -254,7 +254,7 @@ const Resume = () => {
 
             <TabsTrigger
               value="education"
-              className="flex items-center justify-between gap-2 sm:gap-3 px-3.5 sm:px-5 py-3 sm:py-3.5 rounded-xl bg-[#27272c] border border-white/5 data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:font-bold transition-all duration-300 group"
+              className="flex items-center justify-between gap-2 sm:gap-3 px-3.5 sm:px-5 py-3 sm:py-3.5 rounded-xl bg-[#27272c] border border-white/5 data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:font-bold transition-all duration-300 group cursor-pointer"
             >
               <div className="flex items-center gap-2 sm:gap-3 min-w-0">
                 <GraduationCap size={16} className="group-data-[state=active]:text-primary text-accent transition-colors shrink-0" />
@@ -267,7 +267,7 @@ const Resume = () => {
 
             <TabsTrigger
               value="about"
-              className="flex items-center justify-between gap-2 sm:gap-3 px-3.5 sm:px-5 py-3 sm:py-3.5 rounded-xl bg-[#27272c] border border-white/5 data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:font-bold transition-all duration-300 group"
+              className="flex items-center justify-between gap-2 sm:gap-3 px-3.5 sm:px-5 py-3 sm:py-3.5 rounded-xl bg-[#27272c] border border-white/5 data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:font-bold transition-all duration-300 group cursor-pointer"
             >
               <div className="flex items-center gap-2 sm:gap-3 min-w-0">
                 <User size={16} className="group-data-[state=active]:text-primary text-accent transition-colors shrink-0" />
@@ -392,9 +392,9 @@ const Resume = () => {
                               <p className="text-xs sm:text-sm font-medium text-white group-hover:text-accent transition-colors truncate">
                                 {skill.name}
                               </p>
-                              <p className="text-[9px] sm:text-[10px] font-mono text-white/40 truncate">
+                              {/* <p className="text-[9px] sm:text-[10px] font-mono text-white/40 truncate">
                                 {skill.level}
-                              </p>
+                              </p> */}
                             </div>
                           </div>
                         ))}
@@ -497,7 +497,7 @@ const Resume = () => {
                         {item.href ? (
                           <a
                             href={item.href}
-                            className="text-sm font-semibold text-white hover:text-accent transition-colors truncate block"
+                            className="text-sm font-semibold text-white hover:text-accent transition-colors truncate block cursor-pointer"
                           >
                             {item.fieldValue}
                           </a>

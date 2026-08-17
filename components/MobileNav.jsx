@@ -37,7 +37,7 @@ const MobileNav = () => {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger
-        className="flex justify-center items-center p-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-accent/40 text-accent transition-all duration-300"
+        className="flex justify-center items-center p-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-accent/40 text-accent transition-all duration-300 cursor-pointer"
         aria-label="Open Mobile Menu"
       >
         <CiMenuFries className="text-[24px]" />
@@ -46,14 +46,14 @@ const MobileNav = () => {
         <div>
           {/* Header Logo */}
           <div className="mt-4 mb-8 flex items-center justify-between pr-10">
-            <Link href="/" onClick={() => setIsOpen(false)}>
+            <Link href="/" onClick={() => setIsOpen(false)} className="cursor-pointer">
               <h1 className="text-2xl font-bold tracking-tight font-mono">
                 Naveen<span className="text-accent">.</span>
               </h1>
             </Link>
-            <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-accent/10 border border-accent/30 text-accent">
+            {/* <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-accent/10 border border-accent/30 text-accent">
               Menu
-            </span>
+            </span> */}
           </div>
 
           {/* Nav Items as Interactive Cards */}
@@ -67,19 +67,17 @@ const MobileNav = () => {
                   key={index}
                   href={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`flex items-center justify-between p-3.5 sm:p-4 rounded-xl border transition-all duration-300 group ${
-                    isActive
-                      ? "bg-accent/15 border-accent text-white font-semibold shadow-lg shadow-accent/5"
-                      : "bg-[#27272c] border-white/5 text-white/70 hover:text-white hover:border-white/15"
-                  }`}
+                  className={`flex items-center justify-between p-3.5 sm:p-4 rounded-xl border transition-all duration-300 group cursor-pointer ${isActive
+                    ? "bg-accent/15 border-accent text-white font-semibold shadow-lg shadow-accent/5"
+                    : "bg-[#27272c] border-white/5 text-white/70 hover:text-white hover:border-white/15"
+                    }`}
                 >
                   <div className="flex items-center gap-3.5 min-w-0">
                     <div
-                      className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
-                        isActive
-                          ? "bg-accent"
-                          : "bg-white/5 group-hover:bg-accent/10"
-                      }`}
+                      className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${isActive
+                        ? "bg-accent"
+                        : "bg-white/5 group-hover:bg-accent/10"
+                        }`}
                     >
                       <Icon
                         size={18}
@@ -88,9 +86,8 @@ const MobileNav = () => {
                     </div>
                     <div className="min-w-0">
                       <p
-                        className={`font-mono text-sm truncate ${
-                          isActive ? "text-accent font-bold" : "text-white"
-                        }`}
+                        className={`font-mono text-sm truncate ${isActive ? "text-accent font-bold" : "text-white"
+                          }`}
                       >
                         {link.name}
                       </p>
@@ -101,9 +98,8 @@ const MobileNav = () => {
                   </div>
                   <ChevronRight
                     size={16}
-                    className={`shrink-0 transition-transform group-hover:translate-x-1 ${
-                      isActive ? "text-accent" : "text-white/30"
-                    }`}
+                    className={`shrink-0 transition-transform group-hover:translate-x-1 ${isActive ? "text-accent" : "text-white/30"
+                      }`}
                   />
                 </Link>
               );
@@ -113,8 +109,8 @@ const MobileNav = () => {
 
         {/* Drawer Footer with Hire Me and Socials */}
         <div className="pt-6 mt-4 border-t border-white/10 flex flex-col gap-4">
-          <Link href="/contact" onClick={() => setIsOpen(false)} className="w-full">
-            <Button className="w-full bg-accent hover:bg-accent-hover text-primary font-mono text-xs uppercase font-bold tracking-wider flex items-center justify-center gap-2 py-5 rounded-xl shadow-lg shadow-accent/15">
+          <Link href="/contact" onClick={() => setIsOpen(false)} className="w-full cursor-pointer">
+            <Button className="w-full bg-accent hover:bg-accent-hover text-primary font-mono text-xs uppercase font-bold tracking-wider flex items-center justify-center gap-2 py-5 rounded-xl shadow-lg shadow-accent/15 cursor-pointer">
               <span>Hire Me</span>
               <Send size={13} />
             </Button>
@@ -128,7 +124,7 @@ const MobileNav = () => {
                 href="https://github.com/NaveenBandaru29"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:text-accent hover:border-accent/40 transition-colors"
+                className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:text-accent hover:border-accent/40 transition-colors cursor-pointer"
                 aria-label="GitHub"
               >
                 <FaGithub size={14} />
@@ -137,7 +133,7 @@ const MobileNav = () => {
                 href="https://linkedin.com/in/naveen-bandaru-881177239"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:text-accent hover:border-accent/40 transition-colors"
+                className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:text-accent hover:border-accent/40 transition-colors cursor-pointer"
                 aria-label="LinkedIn"
               >
                 <FaLinkedinIn size={14} />

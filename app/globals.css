@@ -1,10 +1,28 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
-@layer base{
-    body{
-      @apply font-primary bg-primary text-white leading-loose;
-    }
+@layer base {
+  body {
+    @apply font-primary bg-primary text-white leading-loose;
+  }
+
+  button,
+  a,
+  [role="button"],
+  [role="tab"],
+  [role="option"],
+  [role="combobox"],
+  [role="menuitem"],
+  select,
+  summary,
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"],
+  input[type="checkbox"],
+  input[type="radio"],
+  .cursor-pointer {
+    cursor: pointer;
+  }
 }
 .h1{
   @apply text-[40px] xl:text-[70px] leading-[1.1] font-semibold;
