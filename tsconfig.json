@@ -12,7 +12,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-  /* Bundler mode */
+    /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
@@ -20,7 +20,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     /* Path mapping */
-    "baseUrl": ".",
+    // "baseUrl": ".",
     "paths": {
       "@/*": [
         "./*"
